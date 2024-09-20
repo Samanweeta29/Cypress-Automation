@@ -23,7 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-///<reference types="Cypress" />
+///<reference types="cypress" />
 ///<reference types="Cypress-xpath" />
 Cypress.Commands.add('getIframe', (iframe) =>{
     return cy.get(iframe)
@@ -35,3 +35,5 @@ Cypress.Commands.add('getIframe', (iframe) =>{
 import 'cypress-iframe';
 // or
 require('cypress-iframe');
+import 'cypress-shadow-dom';
+import 'cypress-file-upload';

@@ -9,12 +9,17 @@
   "author": "Samanweeta",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^13.8.1"
+    "cypress": "^13.14.2"
   },
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.5",
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-file-upload": "^5.0.8",
     "cypress-iframe": "^1.0.1",
-    "cypress-xpath": "^2.0.1"
+    "cypress-shadow-dom": "^1.4.1",
+    "cypress-xpath": "^2.0.1",
+    "esbuild": "^0.23.1"
   }
 }
