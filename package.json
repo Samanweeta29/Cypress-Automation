@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "cypress-file-upload": "^5.0.8",
+    "cypress-iframe": "^1.0.1",
+    "cypress-shadow-dom": "^1.4.1",
+    "cypress-xpath": "^2.0.1"
+  }
+}
