@@ -1,7 +1,20 @@
 node_modules/
+screenshots/
+Page Objects/
+
+# Cypress cache
+.cache/
+
+# Cypress screenshots and videos
+cypress/screenshots/
+cypress/videos/
 
 # Ignore log files
 *.log
 
 # Ignore environment files
 .env
+
+# OS files
+Thumbs.db
+.DS_Store
