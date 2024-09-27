@@ -64,3 +64,13 @@ Cypress.Commands.add('optionDropdown', (dropdownSelector, optionText) => {
     cy.get(dropdownSelector).click(); // Open the dropdown
     cy.contains(optionText).click();  // Select the option based on visible text
   });
+
+  Cypress.Commands.add(' ', (iframeSelector) => {
+    return cy
+      .get(iframeSelector) // Get the iframe
+      .should('be.visible') // Ensure it is visible
+      .then(($iframe) => {
+        const body = $iframe.contents().find('body'); // Get the iframe's body
+        return cy.wrap(body); // Wrap the body so we can use Cypress commands on it
+      });
+  });
