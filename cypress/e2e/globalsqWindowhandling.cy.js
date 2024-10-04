@@ -1,9 +1,9 @@
-describe('GlobalSQ Window Handling and Ifarmes',()=>{
+describe('GlobalSQ Window Handling and Ifarmes',{ tags: '@disperz' },()=>{
     before(()=>{
         cy.visit('https://www.globalsqa.com/demo-site/frames-and-windows/');
     })
 
-    it.skip('open new tab',()=>{
+    it('open new tab',()=>{
         cy.get('a[target="_blank"]').contains('Click Here')  
             .should('be.visible')                             
             .should('exist')                                   
@@ -12,7 +12,7 @@ describe('GlobalSQ Window Handling and Ifarmes',()=>{
             .click();     
     })
 
-    it.skip('open new window',()=>{
+    it('open new window',()=>{
         cy.get('[id="Open New Window"]').click();
         cy.get('.information.closable').should('contain','Click below button to open a new window now');
         cy.wait(2000);
