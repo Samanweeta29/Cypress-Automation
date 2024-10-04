@@ -4,7 +4,11 @@ const addCucumberPreprocessorPlugin = require('@badeball/cypress-cucumber-prepro
 const createEsbuildPlugin = require('@badeball/cypress-cucumber-preprocessor/esbuild').createEsbuildPlugin;
 
 module.exports = defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
   e2e: {
+    setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
+    },
     async setupNodeEvents(on, config) {
       // Set up bundler for cucumber
       const bundler = createBundler({
@@ -21,5 +25,6 @@ module.exports = defineConfig({
     baseUrl: 'http://automationexercise.com',
     pageLoadTimeout: 100000,
     defaultCommandTimeout: 8000,
-  },
+    
+  }
 });
